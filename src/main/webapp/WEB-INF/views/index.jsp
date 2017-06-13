@@ -11,6 +11,10 @@
     <title>Title</title>
 </head>
 <body>
-hello
+<form action="home/one.do" method="post">
+  <input type="text" name="username"/>
+  <input type="submit" value="提交"/>
+</form>
+
 </body>
 </html>
