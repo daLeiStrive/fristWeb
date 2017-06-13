@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac54ab92-e5dd-4baf-a966-bab662bae8fe" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="DELETED" beforePath="D:\myFristWeb\src\main\resources\contextConfigLocation.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myFristWeb.iml" afterPath="$PROJECT_DIR$/myFristWeb.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="ac54ab92-e5dd-4baf-a966-bab662bae8fe" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -645,7 +639,7 @@
       <option name="number" value="Default" />
       <updated>1497280111703</updated>
       <workItem from="1497280115384" duration="2613000" />
-      <workItem from="1497315270064" duration="3157000" />
+      <workItem from="1497315270064" duration="3173000" />
     </task>
     <task id="LOCAL-00001" summary="这是我第一次提交到git">
       <created>1497321422478</created>
@@ -659,11 +653,17 @@
       <option name="project" value="LOCAL" />
       <updated>1497321790936</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="这是我第一次提交到git">
+      <created>1497321968014</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1497321968014</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5770000" />
+    <option name="totallyTimeSpent" value="5786000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1036" extended-state="6" />
