@@ -9,9 +9,17 @@
 <html lang="cn">
 <head>
     <title>首页</title>
-
+    <style>
+        .tx,.tx * {
+            width: 100%;
+            height:100%;
+            position: absolute;
+        }
+    </style>
 </head>
-<body style="padding-left: 10%;padding-right: 10%; padding-top: 20px;background-color: whitesmoke">
+<body <%--style="padding-left: 10%;padding-right: 10%; padding-top: 20px;background-color: whitesmoke"--%> style="    color: white;">
+<canvas id="canvas" class="tx"></canvas>
+<div id='holder' class="tx"></div>
 <div class="container" style="    padding: 40px;background-color: white;">
     <form>
         <div class="form-group col-md-6">
