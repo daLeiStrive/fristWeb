@@ -21,9 +21,9 @@
 
        <!--静态资源映射-->
        <!--本项目把静态资源放在了WEB-INF的statics目录下，资源映射如下-->
-      <mvc:resources mapping="/css/**" location="/bizmodules/statics/css/"/>
+     <!-- <mvc:resources mapping="/css/**" location="/bizmodules/statics/css/"/>
        <mvc:resources mapping="/js/**" location="/bizmodules/statics/js/"/>
-       <mvc:resources mapping="/image/**" location="/bizmodules/statics/image/"/>
+       <mvc:resources mapping="/image/**" location="/bizmodules/statics/image/"/>-->
        <!--<mvc:resources mapping="/fonts/**" location="/bizmodules/statics/fonts/"/>-->
 
        <!--但是项目部署到linux下发现WEB-INF的静态资源会出现无法解析的情况，但是本地tomcat访问正常，因此建议还是直接把静态资源放在webapp的statics下，映射配置如下-->
@@ -42,7 +42,7 @@
        <bean id="defaultViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
               <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
               <property name="prefix" value="/bizmodules/views/jsp/"/><!--设置JSP文件的目录位置-->
-              <property name="suffix" value=".jsp"/>
+              <property name="suffix" value=""/><!-- 设置后缀名 比如 .jsp、.html -->
        </bean>
 
        <!-- springmvc文件上传需要配置的节点 配置MultipartResolver 用于文件上传 使用spring的CommosMultipartResolver -->

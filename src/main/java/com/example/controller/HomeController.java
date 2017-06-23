@@ -40,7 +40,7 @@ public class HomeController {
         //输出日志文件
         logger.info("the first jsp pages");
         //返回一个index.jsp这个视图
-        return "index";
+        return "test";
     }
     @ResponseBody//返回json
     @RequestMapping("two.do")
