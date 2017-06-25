@@ -72,9 +72,9 @@ DaLei.Const.CACHE_MODULE_TAB = 'CACHE_MODULE_TAB';
 DaLei.Const.CACHE_ACTIVE_MODULE = 'CACHE_ACTIVE_MODULE';
 DaLei.Const.CACHE_ACTIVE_MODULE_KEY = 'ACTIVE_MODULE';
 
-DaLei.Const.JSON_ACTION = 'controller/json.action';
-DaLei.Const.POST_ACTION = 'controller/post.action';
-DaLei.Const.FREEMARKER_LOAD_PAGE = 'controller/loadpage.action';
+DaLei.Const.JSON_ACTION = 'home/json.action';
+DaLei.Const.POST_ACTION = 'home/post.action';
+DaLei.Const.FREEMARKER_LOAD_PAGE = 'home/loadpage.action';
 DaLei.Const.COMMON_LOADPAGE = 'common-loadpage';
 
 DaLei.Const.LANGUAGE_ID_STORE_DATA = [

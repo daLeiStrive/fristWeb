@@ -1,4 +1,4 @@
-DaLei.define("MaterialClass.controller.MaterialClassController", {
+DaLei.define("MaterialClass.controller.Test", {
     extend: 'DaLei.bootstrap.mvc.AbstractCrudController',
     viewClass: 'MaterialClass.view.MaterialClassView',
     extraEvents: [
@@ -42,22 +42,7 @@ DaLei.define("MaterialClass.controller.MaterialClassController", {
     },
     afterModify: function () {
         var me = this;
-        var filterClassLevel = 0;
-        var classLevel = me.view.getCmp("ciimpMaterialClassDto->classLevel").gotValue();
-        if (DaLei.ObjUtil.isNotEmpty(classLevel)) {
-            if ("1" == classLevel) {
-                me.view.getCmp("ciimpMaterialClassDto->parentUuid").sotDisable();
-            } else {
-                me.view.getCmp("ciimpMaterialClassDto->parentUuid").sotEnable();
-                if ("2" == classLevel) {
-                    filterClassLevel = "1";
-                } else if ("3" == classLevel) {
-                    filterClassLevel = "2";
-                }
-            }
-        }
 
-        me.view.getCmp("ciimpMaterialClassDto->filterClassLevel").sotValue(filterClassLevel);
     },
     beforeSave: function () {
         var me = this;
@@ -72,7 +57,7 @@ DaLei.define("MaterialClass.controller.MaterialClassController", {
     },
     afterLoadItem: function (data) {
         var me = this;
-        me.view.getCmp("ciimpMaterialClassDto->parentUuid").sotDisable();
+
     },
     beforeCancel: function () {
         var me = this;

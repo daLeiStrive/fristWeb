@@ -174,7 +174,7 @@ DaLei.loadFreeMarkerPage = function (action, params, success, failure) {
         success(retdata);
     }
 };
-
+//加载模板文件
 DaLei.loadFreeMarkerAction = function (action, postData, success, failure) {
     var params = {};
     params.viewdata = postData;
@@ -194,7 +194,7 @@ DaLei.getSign = function (actionName, postdata) {
         key = DaLei.CacheUtil.get(DaLei.Const.USER_TOKEN);
     data += DaLei.JSON.encode(postdata || {});
     key = DaLei.ObjUtil.isEmpty(key) ? "DaLei" : key;
-    return DaLei.StrUtil.getHMACSHA256(data, key);
+    // return DaLei.StrUtil.getHMACSHA256(data, key);
 };
 
 //Get sys config properties
@@ -651,10 +651,10 @@ DaLei.openTabCtrl = function (linkhref, title, itemid, menutype, actionparams, r
                     var t = setTimeout(function(){
                         DaLei.initComboStores($("#iframe_" + itemid), itemid, controller.pageCacheRefresh);
 
-                        $.parser.parse($("#iframe_" + itemid));
+                        /*$.parser.parse($("#iframe_" + itemid));
                         $.parser.onComplete = function () {
                             tabStrip.removeMask(itemid);
-                        };
+                        };*/
 
                         DaLei.bootstrapParse($("#iframe_" + itemid), controller, itemid, true).done(function(){
                             controller.init($("#iframe_" + itemid), actionparams, itemid, title);
@@ -978,7 +978,7 @@ DaLei.getMenuButtonsPrivilege = function (menucode) {
 DaLei.getFavoriteMenus = function () {
     var menus = DaLei.CacheUtil.getTemp(DaLei.Const.CACHE_TYPE_SYS_MENU, {}, !0, !0);
     var favorites = menus.userFavorites;
-    return favorites;
+    return "favorites";
 }
 
 

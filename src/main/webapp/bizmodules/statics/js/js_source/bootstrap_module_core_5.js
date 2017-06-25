@@ -205,6 +205,7 @@ DaLei.define = function(objName, obj){
     }
     if(obj instanceof Object && obj.extend) {
         var parentStr = obj.extend;
+        debugger
         DaLei.loadComponent(parentStr)
             .done(function(parentObj){
                 obj._compName = objName;

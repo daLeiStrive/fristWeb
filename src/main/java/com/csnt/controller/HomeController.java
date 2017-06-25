@@ -1,21 +1,17 @@
-package com.example.controller;
+package com.csnt.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
-import org.springframework.web.multipart.support.DefaultMultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.view.RedirectView;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.util.HashMap;
 import java.util.List;
@@ -28,22 +24,27 @@ import java.util.Map;
  */
 // 注解标注此类为springmvc的controller，url映射为"/home"
 @Controller
-@RequestMapping("/home/*")
+@RequestMapping({"/home/*"})
+//@SuppressWarnings("unchecked, unused")
 public class HomeController {
     //添加一个日志器
     private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+    private final String[] responseTypes = new String[]{"application/json;charset=utf-8", "text/plain;charset=utf-8"};
+
+    public HomeController() {
+    }
 
     //映射一个action
-    @RequestMapping("one.do")
+    @RequestMapping("one.action")
     public  String index(HttpServletRequest reques){
 //        ,HttpServletResponse response
         //输出日志文件
         logger.info("the first jsp pages");
         //返回一个index.jsp这个视图
-        return "test";
+        return "test.html";
     }
     @ResponseBody//返回json
-    @RequestMapping("two.do")
+    @RequestMapping("two.action")
     public Map testLogin2(HttpServletRequest request){
         // request和response不必非要出现在方法中，如果用不上的话可以去掉
         // 参数的名称是与页面控件的name相匹配，参数类型会自动被转换
@@ -52,7 +53,6 @@ public class HomeController {
         Map<String,Object> testMap = new HashMap<>();
         testMap.put("name","小唐");
         testMap.put("age","小wang");
-
         /*Map resultMap = new HashMap();
         ModelAndView mav = new ModelAndView("/bids/bids");
         resultMap.put("modelAndView", mav);*/
@@ -61,7 +61,7 @@ public class HomeController {
         // return new ModelAndView("redirect:../index.jsp");
     }
     @ResponseBody//返回json
-    @RequestMapping("fileUpload.do")
+    @RequestMapping("fileUpload.action")
     public Map fileUpload(HttpServletRequest request) {
 //创建一个通用的多部分解析器.
         CommonsMultipartResolver commonsMultipartResolver = new
@@ -99,6 +99,12 @@ public class HomeController {
 
         // 重定向
         return new HashMap<>();
+    }
+
+    @RequestMapping("loadpage.action")
+    public ModelAndView executePageAction(){
+        ModelAndView view = new ModelAndView("/test.html");
+        return view;
     }
 
 }
